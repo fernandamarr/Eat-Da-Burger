@@ -1,0 +1,89 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url(/assets/img/burger-bgd.png);
+    background-size: cover;
+}
+
+.title {
+    font-family: 'Sigmar One', cursive;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.burger-title {
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#list-devoured {
+    margin: 10px;
+    height: 400px;
+    background-color: #8FD8D2;
+}
+
+#list-burgers {
+    margin: 10px;
+    height: 400px;
+    background-color: #FEDCD2;
+}
+
+.container {
+    padding: 50px;
+}
+
+.available-burgers {
+    font-size: 20px;
+    margin: 8px;
+    border: 1px solid #8FD8D2;
+    padding: 3px;
+}
+
+.devoured-burgers {
+    font-size: 20px;
+    margin: 8px;
+    border: 1px solid #FEDCD2;
+    padding: 3px;
+}
+
+#burger-ready {
+    float: right;
+    border: 2px solid #8FD8D2;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#burger-ready:hover {
+    color: #ffffff;
+    background-color: #8FD8D2;
+}
+
+#add-burger{
+    margin: 0 auto; 
+    width: 250px;
+    margin-bottom: 50px;
+}
+
+#enter-burger {
+    font-size: 25px;
+    width: 300px;
+    height: 70px;
+    color: #000000;
+    background-color: #FEDCD2;   
+}
+
+#submit-burger {
+    font-size: 20px;
+    height: 50px;
+    margin: 0 auto; 
+    width: 300px;
+    padding: 10px;
+}
+
+#submit-burger:hover {
+    color: #8FD8D2;
+    background-color:#ffffff;
+    border: 2px solid #8FD8D2;
+}

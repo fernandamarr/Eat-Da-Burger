@@ -1,7 +1,7 @@
 // Create express connection and run node server
 
 var express = require("express");
-var bodyParser = require("body-parser");
+// var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var methodOverride = require("method-override");
 
@@ -11,10 +11,10 @@ var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
 // This is a level of abstraction to hide credentials from user
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
 
 // Parse application body as JSON
-app.use(bodyParser.urlencoded({
+app.use(express.urlencoded({
   extended: false
 }));
 app.use(express.json());
@@ -31,7 +31,7 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgers_controller.js");
 
 // Use express routes defined
-app.use(routes);
+app.use("/", routes);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function () {
