@@ -5,7 +5,7 @@ body {
 
 .title {
     font-family: 'Sigmar One', cursive;
-    font-size: 80px;
+    font-size: 60px;
     color: #000000;
     padding: 20px;
 }
@@ -18,14 +18,14 @@ body {
 
 #list-devoured {
     margin: 10px;
-    height: 400px;
+    height: 300px;
     overflow: auto;
     background-color: #62EDD6;
 }
 
 #list-burgers {
     margin: 10px;
-    height: 400px;
+    height: 300px;
     overflow: auto;
     background-color: #FE65B7;
 }
