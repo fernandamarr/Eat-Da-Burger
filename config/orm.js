@@ -21,8 +21,7 @@ function objToSql(obj) {
     // loop through keys and push key/value pair as str into arr
     for (var key in obj) {
         var value = obj[key];
-        // check to skip hidden properties
-        // this method checks whether the object has the specified property as its own property (as opposed to inheriting it).
+        // this method checks whether the object has the specified property as its own property (as opposed to inheriting it)
         if (Object.hasOwnProperty.call(obj, key)) {
             // add quotes if the string has spaces
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
@@ -34,7 +33,7 @@ function objToSql(obj) {
     }
 }
 
-// Methods needed in order to retrieve and store data in database.
+// Methods needed in order to retrieve and store data in database
 var orm = {
     // function returns all entries
     selectAll: function (tableInput, cb) {

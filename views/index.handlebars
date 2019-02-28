@@ -1,35 +1,35 @@
-{{!-- <img  src="assets/img/burger.gif" class="text-center"> --}}
 <h1 class="title text-center">Eat-Da-Burger!</h1>
 
-{{!-- <main> --}}
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6" id="list-burgers">
-                <h2 class="burger-title text-center">Burgers Available</h2>
-                {{#each burgers}}
-                {{#unless this.devoured}}
-                <div class="available-burgers">
-                    <form action="/burgers/{{this.id}}?_method=PUT" method="POST" class="update-button">
-                        {{this.burger_name}}
-                        <button type="submit" class="btn- btn-default" id="burger-ready">DEVOUR IT</button>
-                    </form>
-                </div>
-                {{/unless}}
-                {{/each}}
-            </div>
-            <div class="col" id="list-devoured">
-                <h2 class="burger-title text-center">Burgers Devoured</h2>
-                {{#each burgers}}
-                {{#if this.devoured}}
-                <div class="devoured-burgers">
+<div class="container">
+    <div class="row">
+        <div class="col" id="list-burgers">
+            <h2 class="burger-title text-center">Burgers Available</h2>
+            {{#each burgers}}
+            {{#unless this.devoured}}
+            <div class="available-burgers">
+                <form action="/burgers/{{this.id}}?_method=PUT" method="POST" class="update-button">
                     {{this.burger_name}}
-                </div>
-                {{/if}}
-                {{/each}}
+                    <button type="submit" class="btn- btn-default" id="burger-ready">DEVOUR IT</button>
+                </form>
             </div>
+            {{/unless}}
+            {{/each}}
+        </div>
+        <div class="col" id="burger-gif">
+            <img src="assets/img/burger.gif" class="text-center">
+        </div>
+        <div class="col" id="list-devoured">
+            <h2 class="burger-title text-center">Burgers Devoured</h2>
+            {{#each burgers}}
+            {{#if this.devoured}}
+            <div class="devoured-burgers">
+                {{this.burger_name}}
+            </div>
+            {{/if}}
+            {{/each}}
         </div>
     </div>
-{{!-- </main> --}}
+</div>
 
 <form id="add-burger" action="/burgers" class="create-form" method="POST">
     <div class="form-group col-md-8">

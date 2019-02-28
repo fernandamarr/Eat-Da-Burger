@@ -8,9 +8,8 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
-// Getting data from ORM 
 // This is the JS object/data which is getting passed to view engine (in this case, handlebars)
-// Handlebars renders html file index.handlebars and rendering the object cats
+// Handlebars renders html file index.handlebars and rendering the object burgers
 router.get("/", function (req, res) {
     burger.selectAll(function (data) {
         var hbsObject = {

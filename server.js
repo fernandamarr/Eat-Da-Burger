@@ -1,7 +1,5 @@
 // Create express connection and run node server
-
 var express = require("express");
-// var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var methodOverride = require("method-override");
 
@@ -19,7 +17,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
-// the main page is always displayed\
+// the main page is always displayed
 app.use(methodOverride('_method'));
 app.engine("handlebars", exphbs({
   defaultLayout: "main"

@@ -1,18 +1,17 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background: url(/assets/img/burger-bgd.png);
-    background-size: cover;
+    background-color: rgb(251, 255, 22);
 }
 
 .title {
     font-family: 'Sigmar One', cursive;
     font-size: 80px;
-    color: rgb(255, 255, 255);
+    color: #000000;
     padding: 20px;
 }
 
 .burger-title {
-    color: #ffffff;
+    color: #000000;
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -20,44 +19,48 @@ body {
 #list-devoured {
     margin: 10px;
     height: 400px;
-    background-color: #8FD8D2;
+    overflow: auto;
+    background-color: #62EDD6;
 }
 
 #list-burgers {
     margin: 10px;
     height: 400px;
-    background-color: #FEDCD2;
+    overflow: auto;
+    background-color: #FE65B7;
 }
 
 .container {
-    padding: 50px;
+    padding: 10px;
 }
 
 .available-burgers {
+    overflow: hidden;
     font-size: 20px;
     margin: 8px;
-    border: 1px solid #8FD8D2;
+    border: 2px solid #62EDD6;
     padding: 3px;
 }
 
 .devoured-burgers {
     font-size: 20px;
     margin: 8px;
-    border: 1px solid #FEDCD2;
+    border: 2px solid #FE65B7;
     padding: 3px;
 }
 
 #burger-ready {
     float: right;
-    border: 2px solid #8FD8D2;
     border-radius: 8px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+    background-color: #62EDD6;
 }
 
 #burger-ready:hover {
-    color: #ffffff;
-    background-color: #8FD8D2;
+    color: #000000;
+    border: 3px solid #62EDD6;
+    background-color: rgb(255, 255, 255);
 }
 
 #add-burger{
@@ -71,7 +74,7 @@ body {
     width: 300px;
     height: 70px;
     color: #000000;
-    background-color: #FEDCD2;   
+    background-color: #FE65B7;   
 }
 
 #submit-burger {
@@ -80,10 +83,12 @@ body {
     margin: 0 auto; 
     width: 300px;
     padding: 10px;
+    color: #000000;
+    background-color: #62EDD6;
 }
 
 #submit-burger:hover {
-    color: #8FD8D2;
+    border: 3px solid #62EDD6;
+    color: #000000;
     background-color:#ffffff;
-    border: 2px solid #8FD8D2;
 }
